@@ -1,9 +1,14 @@
+import MyComponent from "./components/Mycomponent";
 
 
 function App() {
   return (
-    <h1>Hello world</h1>
+     <MyComponent />
   );
 }
+
+// const MyComponent = () => {
+
+// }
 
 export default App;
