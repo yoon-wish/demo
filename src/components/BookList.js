@@ -19,7 +19,7 @@ const BookList = () => {
             {
                 method: "GET",
                 headers: {
-                    Authorization: "KakaoAK c8057bddc00f9f8d175876dd7d5977f1",
+                    Authorization: `KakaoAK ${process.env.REACT_APP_API_KEY}`,
                 },
             }
         );
