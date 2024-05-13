@@ -1,10 +1,11 @@
-import Home from "./Home";
+import React from 'react';
+import Home from './Home';
 
-function MyComponent(message){
+const MyComponent = ({message}) => {
     return (
         <>
-            <h1>Hello world</h1>
-            <p>(message)</p>
+            <h1>Hello World</h1>
+            <p>{message}</p>
             <Home style={
                 {
                     "color": "red",
@@ -18,6 +19,6 @@ function MyComponent(message){
             }/>
         </>
     );
-}
+};
 
 export default MyComponent;

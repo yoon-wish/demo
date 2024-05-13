@@ -1,9 +1,8 @@
-import MyComponent from "./components/Mycomponent";
-
+import BookList from "./components/BookList";
 
 function App() {
   return (
-     <MyComponent />
+     <BookList />
   );
 }
 
