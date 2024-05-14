@@ -1,13 +1,10 @@
-import BookList from "./components/BookList";
+import { RouterProvider } from "react-router-dom";
+import router from "./router";
 
 function App() {
   return (
-     <BookList />
+     <RouterProvider  router={router}/>
   );
 }
-
-// const MyComponent = () => {
-
-// }
 
 export default App;
