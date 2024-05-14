@@ -4,12 +4,12 @@ import { MdOndemandVideo } from "react-icons/md";
 import { FaMoon } from "react-icons/fa6";
 import { IoMdSunny } from "react-icons/io";
 
-const VideoList = () => {
+const BookList = () => {
 
     // useEffect가 어떻게 동작하는 지 State로 확인
     // useState 는 화면 랜더링에 반영됨 >> 그렇다고 이것만 쓰면 리랜더링의 장점 X
     // 그럴거면 뭐하러 리액트를 쓰냐함
-    const [VideoList, setVideoList] = useState([]);
+    const [bookList, setBookList] = useState([]);
     // 디폴트 값을 useState로 설정해주는거임
     const [page, setPage] = useState(1);
     const [search, setSearch] = useState('라이즈');
@@ -23,7 +23,7 @@ const VideoList = () => {
     
     const fetchBooks = async () => {
         const response = await fetch(
-            `https://dapi.kakao.com/v2/search/vclip?query=${search}&page=${page}`,
+            `https://dapi.kakao.com/v3/search/book?query=${search}&page=${page}`,
             {
                 method: "GET",
                 headers: {
@@ -41,7 +41,7 @@ const VideoList = () => {
         pageCount.current = pageCount.current > 15 ? 15 : pageCount.current;
         console.log(pageCount.current);
 
-        setVideoList(data.documents);
+        setBookList(data.documents);
     }
 
     const changeSearch = e => {
@@ -66,7 +66,7 @@ const VideoList = () => {
             <Box>
                 <Heading color={color}>
                     <Icon as={MdOndemandVideo} boxSize={"1.5em"}></Icon>
-                    동영상 검색 목록</Heading>
+                    도서 검색 목록</Heading>
                 {
                     colorMode === "light" ?
                         <IconButton icon={<FaMoon />} onClick={toggleColorMode} size={"lg"}/> :
@@ -83,7 +83,7 @@ const VideoList = () => {
                             </Tr>
                         </Thead>
                         <Tbody>
-                            {VideoList.map((book, index) => {
+                            {bookList.map((book, index) => {
                                 return (
                                     <>
                                         <Tr>
@@ -117,4 +117,4 @@ const VideoList = () => {
     );
 };
 
-export default VideoList;
+export default BookList;
