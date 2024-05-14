@@ -1,6 +1,6 @@
 import { Box, Button, HStack, Heading, Icon, IconButton, Input, Stack, Table, TableContainer, Tbody, Td, Tfoot, Th, Thead, Tr, useColorMode, useColorModeValue } from '@chakra-ui/react';
 import React, { useEffect, useRef, useState } from 'react';
-import { MdOndemandVideo } from "react-icons/md";
+import { FaBookOpen } from "react-icons/fa6";
 import { FaMoon } from "react-icons/fa6";
 import { IoMdSunny } from "react-icons/io";
 
@@ -65,7 +65,7 @@ const BookList = () => {
         <>
             <Box>
                 <Heading color={color}>
-                    <Icon as={MdOndemandVideo} boxSize={"1.5em"}></Icon>
+                    <Icon as={FaBookOpen} boxSize={"1.5em"}></Icon>
                     도서 검색 목록</Heading>
                 {
                     colorMode === "light" ?

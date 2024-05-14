@@ -13,7 +13,7 @@ const Home = ({style}) => {
   
     return (
       <>
-        <button style={style} onClick={countUp}>{count}</button>
+        {/* <button style={style} onClick={countUp}>{count}</button> */}
       </>
     );
 };

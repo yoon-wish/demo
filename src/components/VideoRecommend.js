@@ -1,4 +1,4 @@
-import { Box, Button, HStack, Heading, Icon, IconButton, Input, Stack, Table, TableContainer, Tbody, Td, Tfoot, Th, Thead, Tr, useColorMode, useColorModeValue } from '@chakra-ui/react';
+import { Box, Button, HStack, Heading, Icon, IconButton, Image, Input, Stack, Table, TableContainer, Tbody, Td, Tfoot, Th, Thead, Tr, useColorMode, useColorModeValue } from '@chakra-ui/react';
 import React, { useEffect, useRef, useState } from 'react';
 import { MdOndemandVideo, MdRecommend } from "react-icons/md";
 import { FaMoon } from "react-icons/fa6";
@@ -64,6 +64,7 @@ const VideoRecommend = () => {
                         <Thead>
                             <Tr>
                                 <Th>No</Th>
+                                <Th>Thumbnail</Th>
                                 <Th>Title</Th>
                                 <Th>Author</Th>
                             </Tr>
@@ -74,6 +75,7 @@ const VideoRecommend = () => {
                                     <>
                                         <Tr>
                                             <Td>{(page - 1) * 10 + index + 1}</Td>
+                                            <Td><Image size='150px' src={video.thumbnail} /></Td>
                                             <Td>
                                                 <a href={video.url}>{video.title}</a>
                                             </Td>
